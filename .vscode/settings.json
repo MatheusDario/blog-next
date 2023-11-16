@@ -1,0 +1,10 @@
+{
+  "emmet.preferences": {},
+  "emmet.includeLanguages": {
+    "javascript": "javascript",
+    "typescript": "typescript",
+    "javascriptreact": "javascriptreact",
+    "typescriptreact": "typescriptreact",
+  },
+  "window.zoomLevel": 1
+}
