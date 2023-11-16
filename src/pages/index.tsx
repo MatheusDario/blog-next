@@ -1,14 +1,8 @@
 import { useEffect, useState } from 'react';
 import { PostData } from '../domain/posts/post';
 import { GetStaticProps } from 'next';
-
-const getPosts = async (): Promise<PostData[]> => {
-  const posts = await fetch(
-    'https://myblog-strapi.onrender.com/api/posts?populate=*',
-  );
-  const jsonPosts = await posts.json();
-  return jsonPosts.data;
-};
+import { getPosts } from '@/data/get-all-posts';
+import HomePage from '@/containers/HomePage';
 
 export type HomeProps = {
   posts: PostData[];
@@ -21,14 +15,7 @@ export default function Home({ posts }: HomeProps) {
   //getPosts().then((response) => setPosts(response));
   //}, [posts]);
 
-  console.log(posts);
-  return (
-    <div>
-      {posts.map((post) => (
-        <h2 key={post.id}>{post.attributes.title}</h2>
-      ))}
-    </div>
-  );
+  return <HomePage posts={posts} />;
 }
 
 export const getStaticProps: GetStaticProps = async () => {
