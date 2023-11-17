@@ -9,12 +9,6 @@ export type HomeProps = {
 };
 
 export default function Home({ posts }: HomeProps) {
-  //const [posts, setPosts] = useState<PostData[]>([]);
-
-  //useEffect(() => {
-  //getPosts().then((response) => setPosts(response));
-  //}, [posts]);
-
   return <HomePage posts={posts} />;
 }
 
