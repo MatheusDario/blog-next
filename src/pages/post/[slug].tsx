@@ -1,24 +1,18 @@
-import Markdown from 'react-markdown'
+import Markdown from 'react-markdown';
 
 import { countAllPosts } from '@/data/count-all-posts';
 import { getPosts } from '@/data/get-all-posts';
 import { getPost } from '@/data/get-posts';
 import { PostData } from '@/domain/posts/post';
 import { GetStaticPaths, GetStaticProps } from 'next';
+import { Post } from '@/containers/Post';
 
 export type DynamicPostProps = {
   post: PostData;
 };
 
 const DynamicPost = ({ post }: DynamicPostProps) => {
-  return (
-    <>
-      <p>{post.attributes.title}</p>
-      <p>
-        <Markdown>{post.attributes.content}</Markdown>
-      </p>
-    </>
-  );
+  return <Post post={post} />;
 };
 
 export default DynamicPost;
