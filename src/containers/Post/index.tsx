@@ -1,23 +1,32 @@
+import Markdown from 'react-markdown';
+
 import { PostData } from '@/domain/posts/post';
 import { Container } from './styled';
 import { Header } from '@/components/Header';
 import { MainContainer } from '@/components/MainContainer';
 import { Heading } from '@/components/Heading';
+import { PostCover } from '@/components/PostCover';
 
 export type PostPros = {
   post: PostData;
-}
+};
 
-export const Post = ({ post }:PostPros ) => {
+export const Post = ({ post }: PostPros) => {
   return (
     <>
-    <Header />
-    <MainContainer>
-      <Container>
-        <Heading>{post.attributes.title}</Heading>
-        <div>{post.attributes.content}</div>
-      </Container>
-    </MainContainer>
+      <Header />
+      <MainContainer>
+        <Container>
+          <Heading>{post.attributes.title}</Heading>
+          <PostCover
+            coverUrl={post.attributes.cover.data.attributes.formats.large.url}
+            coverAlt={post.attributes.title}
+          />
+          <div>
+            <Markdown>{post.attributes.content}</Markdown>
+          </div>
+        </Container>
+      </MainContainer>
     </>
   );
-}
+};

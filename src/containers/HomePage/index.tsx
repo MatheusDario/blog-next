@@ -20,11 +20,9 @@ export default function HomePage({ posts }: HomePageProps) {
               key={post.id}
               title={post.attributes.title}
               slug={post.attributes.slug}
-              cover={
-                post.attributes.cover.data.attributes.formats.thumbnail.url
-              }
+              cover={post.attributes.cover.data.attributes.formats.thumbnail.url}
             />
-          ))}
+          ))}''
         </Container>
       </MainContainer>
       <Footer />

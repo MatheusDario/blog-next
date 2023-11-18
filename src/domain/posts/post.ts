@@ -57,7 +57,7 @@ export type PostCoverFormat = {
 export type PostCoverAttributes = {
   alternativeText: string;
   caption: string;
-  previewUrl: null;
+  url: string;
   provider: string;
   created_by: number;
   updated_by: number;

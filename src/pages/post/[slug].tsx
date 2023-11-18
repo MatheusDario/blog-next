@@ -1,5 +1,3 @@
-import Markdown from 'react-markdown';
-
 import { countAllPosts } from '@/data/count-all-posts';
 import { getPosts } from '@/data/get-all-posts';
 import { getPost } from '@/data/get-posts';
