@@ -11,13 +11,13 @@ export function PostCard({ slug, cover, title }: PostCardPros) {
   return (
     <Container>
       <PostCardCover>
-        <Link href="/api/post/[slug]" as={`/api/post/${slug}`}>
+        <Link href="/post/[slug]" as={`/post/${slug}`}>
           <img src={cover} alt={title} />
         </Link>
       </PostCardCover>
 
       <PostCardHeading>
-      <Link href="/api/post/[slug]" as={`/api/post/${slug}`}>
+      <Link href="/post/[slug]" as={`/post/${slug}`}>
          <span>{title}</span>
         </Link>
       </PostCardHeading>
