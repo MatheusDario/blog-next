@@ -1,5 +1,3 @@
-import Markdown from 'react-markdown';
-
 import { PostData } from '@/domain/posts/post';
 import { Container } from './styled';
 import { Header } from '@/components/Header';
@@ -7,6 +5,7 @@ import { MainContainer } from '@/components/MainContainer';
 import { Heading } from '@/components/Heading';
 import { PostCover } from '@/components/PostCover';
 import { PostDetails } from '@/components/PostDetails';
+import { PostContent } from '@/components/PostContent';
 
 export type PostPros = {
   post: PostData;
@@ -28,9 +27,7 @@ export const Post = ({ post }: PostPros) => {
             author={post.attributes.author.data.attributes.name}
             category={post.attributes.categorie.data.attributes.name}
           />
-          <div>
-            <Markdown>{post.attributes.content}</Markdown>
-          </div>
+          <PostContent content={post.attributes.content} />
         </Container>
       </MainContainer>
     </>
