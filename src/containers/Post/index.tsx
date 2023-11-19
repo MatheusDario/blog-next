@@ -6,6 +6,7 @@ import { Heading } from '@/components/Heading';
 import { PostCover } from '@/components/PostCover';
 import { PostDetails } from '@/components/PostDetails';
 import { PostContent } from '@/components/PostContent';
+import { Comments } from '@/Comments';
 
 export type PostPros = {
   post: PostData;
@@ -28,6 +29,7 @@ export const Post = ({ post }: PostPros) => {
             category={post.attributes.categorie.data.attributes.name}
           />
           <PostContent content={post.attributes.content} />
+          <Comments title={post.attributes.title} slug={post.attributes.slug} />
         </Container>
       </MainContainer>
     </>
