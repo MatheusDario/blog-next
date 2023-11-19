@@ -9,7 +9,6 @@ export type HomeProps = {
 };
 
 export default function Home({ posts }: HomeProps) {
-  posts.map((post) => console.log(post.attributes.createdAt)) 
   return <HomePage posts={posts} />;
 }
 
