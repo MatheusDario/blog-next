@@ -17,7 +17,6 @@ export default function HomePage({ posts }: HomePageProps) {
     <Head>
       <title>{SITE_NAME}</title>
       <meta name="description" content="Blog do Matheus Dario" />
-      <link rel="shortcut icon" href="../../../public/favicon.ico" type="image/x-icon" />
     </Head>
       <Header />
       <MainContainer>
