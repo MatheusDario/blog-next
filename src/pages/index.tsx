@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import { PostData } from '../domain/posts/post';
 import { GetStaticProps } from 'next';
 import { getPosts } from '@/data/get-all-posts';
@@ -9,7 +8,7 @@ export type HomeProps = {
 };
 
 export default function Home({ posts }: HomeProps) {
-  return <HomePage posts={posts} />;
+  return <HomePage category='' posts={posts} />;
 }
 
 export const getStaticProps: GetStaticProps = async () => {

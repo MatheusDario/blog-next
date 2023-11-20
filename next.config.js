@@ -3,8 +3,6 @@
  */
 
 module.exports = {
-  output: 'export',
-  
   experimental: {
     forceSwcTransforms: true,
   },
