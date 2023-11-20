@@ -20,14 +20,8 @@ export const Post = ({ post }: PostPros) => {
   return (
     <>
       <Head>
-        <title>
-          {post.attributes.title} -{' '}
-          {post.attributes.author.data.attributes.name}
-        </title>
-        <meta
-          name="description"
-          content={removeHtml(post.attributes.content).slice(0, 150)}
-        />
+        <title>{post.attributes.title}</title>
+        <meta name="description" content={post.attributes.title} />
       </Head>
       <Header />
       <MainContainer>

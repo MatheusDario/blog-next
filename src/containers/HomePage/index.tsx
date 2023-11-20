@@ -28,7 +28,7 @@ export default function HomePage({ posts }: HomePageProps) {
               slug={post.attributes.slug}
               cover={post.attributes.cover.data.attributes.formats.thumbnail.url}
             />
-          ))}''
+          ))}
         </Container>
       </MainContainer>
       <Footer />
