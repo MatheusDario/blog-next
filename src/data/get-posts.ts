@@ -8,5 +8,8 @@ export const getPost = async (
   const slugString = Array.isArray(slug) ? slug[0] : slug;
   const url = `${POST_SLUG}${slugString}`;
   const jsonPosts = await fetchJson<PostData[]>(url);
+
+  if (!jsonPosts.length) return jsonPosts;
+
   return jsonPosts;
 };

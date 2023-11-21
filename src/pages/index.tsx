@@ -8,13 +8,16 @@ export type HomeProps = {
 };
 
 export default function Home({ posts }: HomeProps) {
-  return <HomePage category='' posts={posts} />;
+  return <HomePage category="" posts={posts} />;
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const posts = await getPosts('sort=id:desc&pagination[start]=0&pagination[limit]=10');
+  const posts = await getPosts(
+    'sort=id:desc&pagination[start]=0&pagination[limit]=10',
+  );
 
   return {
     props: { posts },
+    revalidate: 3,
   };
 };
