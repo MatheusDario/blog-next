@@ -7,10 +7,7 @@ import { Heading } from '@/components/Heading';
 import { PostCover } from '@/components/PostCover';
 import { PostDetails } from '@/components/PostDetails';
 import { PostContent } from '@/components/PostContent';
-import { Comments } from '@/Comments';
-import { SITE_NAME } from '@/config/app-config';
-import { removeHtml } from '@/utils/remove-html';
-import Markdown from 'react-markdown';
+import { Comments } from '@/components/Comments';
 
 export type PostPros = {
   post: PostData;
