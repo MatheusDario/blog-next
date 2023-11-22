@@ -58,9 +58,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const posts = await getPost(context.params?.slug);
+  const post = posts.length > 0 ? posts[0] : {};
 
   return {
-    props: { post: posts[0] },
+    props: { post: post },
     revalidate: 300,
   };
 };
