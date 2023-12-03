@@ -1,36 +1,21 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1>Olá!! Bem-vindo ao Meu Blog</h1>
 
-## Getting Started
+<p>Este repositório contém o código utilizado para desenvolvedor meu blog pessoal, e a seguir irei explicar as ferramentas utilizada no processo de desenvolvimento</p>
 
-First, run the development server:
+<h2>🛠️ Construido com</h2>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<ul>
+    <li>Nextjs</li>
+    <li>React</li>
+    <li>Styled Components</li>
+    <li>Strapi</li>
+    <li>Postgres</li>
+    <li>Pm2</li>
+    <li>Nginx</li>
+</ul>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<h2>📦 Explicando o uso de cada ferramenta</h2>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<p align="justify">O front-end consome uma api-rest e foi desenvolvido utilizando o framework <a href="https://strapi.io/"> NextJS</a> que utiliza a biblioteca do React os estilos optei por utilizar o Styled Component. Afim de manter uma orginzação e padrão do projeto utilizo o eslit e o prettier.</p>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<p align="justify">O back-end foi desenvolvido utilizado o <a href="https://nextjs.org/"> Strapi</a> para gerar uma api-rest, utilizo o postgres como bando de dados e uma maquina virtual disponibilizada pela aws roda um servidor linux que utilizo o Pm2 para gerenciar o inicio da aplicação sempre que servidor ligar ou reinicipar e o Nginx para fazer o proxy reverso além do let's encrypt para gerar o certificado ssl.</p>
