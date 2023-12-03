@@ -6,6 +6,11 @@ export const theme = {
     lightGray: '#dddddd',
     gray: '#999999',
     darkGray: '#555555',
+    color1: '#A4B3BF',
+    color2: '#304659',
+    color3: '#055BA6',
+    color4: '#023E73',
+    color5: '#010D26',
   },
   spacing: {
     smal: '1rem',
