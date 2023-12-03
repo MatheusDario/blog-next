@@ -5,4 +5,3 @@ export const POST_SLUG = `${POSTS_URL}&filters[slug][$eq]=`
 
 export const SITE_NAME = 'Matheus Dario | Blog'
 export const SITE_URL = 'https://blog.matheusdario.com.br';
-export const SITE_URL_DISQUS = 'https://blog.matheusdario.com.br';

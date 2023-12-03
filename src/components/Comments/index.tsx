@@ -13,10 +13,10 @@ export const Comments = ({ slug, title }: CommentsProps) => {
       <DiscussionEmbed
         shortname="blog-matheusdario"
         config={{
-          url: `${SITE_URL}${slug}`,
+          url: `${SITE_URL}/post/${slug}`,
           identifier: slug,
           title: title,
-          language: 'pt-BR',
+          language: 'pt_BR',
         }}
       />
     </Container>
