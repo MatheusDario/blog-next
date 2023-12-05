@@ -5,8 +5,16 @@ export const Container = styled.article`
     width: 100%;
   }
 
+  h2 {
+    margin-top: 20px;
+  }
+
   p {
+    margin-top: 20px;
     margin: ${({theme}) => theme.spacing.medium} 0;
+    line-height: 1.5em;
+    text-indent: 30px;
+    text-align: justify;
   }
 
   ul,
