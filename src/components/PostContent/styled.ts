@@ -33,4 +33,8 @@ export const Container = styled.article`
       font-size: ${theme.spacing.medium};
     `}
   }
+
+  a {
+    font-weight: bold;
+  }
 `;
